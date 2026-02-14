@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-color:lightblue;
+        
+    }
+    .nav{
+        background:
+             /* linear-gradient(rgba(255,2,234,0.5), rgba(255,2,234,0.5)), */
+             /* rgba(255,255,255,1) */
+            url("{% static 'images/img3.jpg' %}"),
+            white;
+        padding: 20px;
+        font-size: 25px;
+        text-align: right;
+        background-size:100% ;
+    }
+    .nav_list a{
+        color:black;
+        padding-right: 20px;
+        text-decoration: none;
+    }
+    .nav_list a:visited{
+        color:black;
+    }
+    .profile-img{
+        position: absolute;
+        border-radius: 50%;
+        right:70px;
+        height:450px;
+        width:400px;
+        top:20%;
+    }
+</style>
+<body>
+    <div class="nav">
+        <div class="nav_list">
+        <a href="{% url 'about' %}">About Me</a>
+        <a href="{% url 'education' %}">Education</a>
+        <a href="{% url 'experience' %}">Experience</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        <a href="{% url 'project' %}">My projects</a>
+        </div>
+    </div>
+    <img src="{% static 'images/kavya.jpeg' %}" class="profile-img">
+</body>
+</html>
